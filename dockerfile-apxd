@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+ENV p="nano neovim python3 asciidoc make gcc g++ automake autoconf"
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get install $p -y
