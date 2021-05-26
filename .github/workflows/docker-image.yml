@@ -15,8 +15,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: |
-           for i in dockerfile*
-            do
-             docker build . --file $i --tag $i:$(date +%s)
-              done
+      run: |  
+           docker build . --file dockerfile-elytra8 --tag :$(date +%s)
